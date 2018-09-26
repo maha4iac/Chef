@@ -6,7 +6,9 @@
 
 #include_recipe 'mywebserver::mygit'
 include_recipe 'mywebserver::webserver'
-include_recipe 'java'
-include_recipe 'mywebserver::mydb'
+#include_recipe 'java'
+#include_recipe 'mywebserver::mydb'
+include_recipe 'mywebserver::myfile'
+
 
 

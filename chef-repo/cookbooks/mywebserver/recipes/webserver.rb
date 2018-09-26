@@ -6,6 +6,12 @@
 
 mywebpack=node['mywebser']['webserverpack']
 
+apt_update 'update package' do
+  ignore_failure 'true'
+  action :update
+end
+
+
 package mywebpack do
   action :install
 end
@@ -14,9 +20,5 @@ service mywebpack do
   action :start
 end
 
-node['mywebser']['installsofts'].each do |mymultypack|
-package mymultypack do
-  action :install
-end
-end
+
 
